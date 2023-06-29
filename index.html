@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <title>Simulador de Espelho</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    #canvas-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+
+    
+
+    canvas {
+      width: 100%;
+      height: 100%;
+    }
+
+    .mirror-simulator {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+
+        .mirror-simulator label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .mirror-simulator input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+
+        .mirror-simulator p {
+            margin: 10px 0;
+        }
+
+        .mirror-simulator p span {
+            font-weight: bold;
+        }
+
+
+  </style>
+</head>
+<body>
+  <div id="canvas-container">
+ 
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <script src="script5.js"></script>
+
+  <div class="mirror-simulator">
+    <label for="height">Altura do objeto:</label>
+    <input type="number" id="height" value = 10 placeholder="Digite a altura do objeto">
+
+    <label for="focus-distance">Distância do foco:</label>
+    <input type="number" id="focus-distance" value="10" placeholder="Digite a distância do foco">
+
+    <label for="object-distance">Distância do objeto:</label>
+    <input type="number" id="object-distance" value="20" placeholder="Digite a distância do objeto">
+
+    <p>Informações: <span id="mirror-image">Há imagem</span></p>
+    <p>Tipo de espelho: <span id="mirror-type">Convexo</span></p>
+    <p>Altura da imagem: <span  id="object-height"></span></p>
+    <p>Distância da imagem: <span id="object-distance-info"></span></p>
+</div>
+</body>
+</html>
